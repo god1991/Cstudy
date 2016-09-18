@@ -1,7 +1,16 @@
 #include <stdio.h>
+struct node
+{
+    int value;
+    struct node *next;
+};
 int main(void)
 {
-   int a=3;   
-    printf("%i",a);
+   struct node a;
+    a.value=3;
+  struct  node b;
+    b.value=4;
+    a.next=&b;
+    printf("a.netx value is : %d",(*(a.next)).value);
     getchar();
 }
